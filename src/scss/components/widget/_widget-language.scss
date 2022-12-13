@@ -1,0 +1,118 @@
+@use "src/scss/base/mixins";
+
+.widget {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: var(--primary-nav-menu-color);
+
+  .wpml-ls {
+    position: relative;
+
+    &-sidebars-language-flags {
+      width: 100%;
+    }
+
+    &-link {
+      background: unset;
+      border: none;
+      padding: 0;
+      border-width: 0;
+    }
+
+    &-sub-menu {
+      display: none;
+      border-top: unset;
+    }
+
+    &-item {
+      background: unset;
+
+      &:hover, &:focus {
+        background: unset;
+      }
+
+      &-toggle {
+        border: none;
+        background: unset;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        order: 1;
+        padding: 0 !important;
+
+        &:after {
+          display: none !important;
+        }
+
+        &:before {
+
+          content: '\e801';
+
+          font-family: "fontello";
+          font-style: normal;
+          font-weight: normal;
+          speak: never;
+          display: inline-block;
+          text-decoration: inherit;
+          width: 1em;
+          margin-right: .2em;
+          text-align: center;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1em;
+          margin-left: .2em;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          order: 2;
+          margin-left: 10px;
+
+          font-size: 12px;
+          line-height: 16px;
+
+
+          //position: absolute;
+          right: 10px;
+          top: 50%;
+          //transform: translate(0, -50%);
+        }
+
+        &:hover {
+          background: unset !important;
+        }
+
+        &:focus {
+          background: unset !important;
+        }
+      }
+    }
+
+    &-flag {
+      border-radius: 50%;
+      @include mixins.sizeRatio(23px);
+    }
+  }
+
+  &.open {
+    z-index: 9;
+    position: relative;
+
+    .wpml-ls-sub-menu {
+      padding-top: 8px;
+      display: flex;
+      position: absolute;
+      right: 0;
+      visibility: visible
+    }
+
+    .wpml-ls-item-toggle {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .wpml-ls-legacy-dropdown-click a:focus, .wpml-ls-legacy-dropdown-click a:hover {
+    background: unset;
+  }
+}

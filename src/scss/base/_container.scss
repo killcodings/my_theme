@@ -1,0 +1,26 @@
+//@use "../acf-blocks/toc/toc";
+@use "../acf-blocks/heading-logo/heading-logo";
+
+.container {
+  max-width: 1366px;
+  padding: 0 var(--offsets);
+  margin: 0 auto;
+  z-index: 1;
+
+  >*:not(.header__block):not(.author-badge):not(:last-child):not(.footer__top) {
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 var(--offsets);
+  }
+
+  & .container {
+    padding: 0;
+  }
+
+}

@@ -1,0 +1,14 @@
+{
+  "name": "acf/testimonial",
+  "title": "Медиа и текст",
+  "description": "Media text",
+  "style": [ "file:./test.css" ],
+  "category": "formatting",
+  "icon": "block-default",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "media-text.php"
+  },
+  "align": "full"
+}

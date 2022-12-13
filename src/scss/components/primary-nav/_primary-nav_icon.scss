@@ -1,0 +1,18 @@
+@use "src/scss/base/mixins";
+
+.primary-nav {
+  $this: &;
+
+  #{$this}_icon {
+    .main-menu-link, .sub-menu-link {
+      position: relative;
+      padding-left: 42px;
+
+      &__icon {
+        position: absolute;
+        left: 10px;
+        @include mixins.sizeRatio(24px);
+      }
+    }
+  }
+}

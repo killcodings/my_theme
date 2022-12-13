@@ -1,0 +1,245 @@
+{
+    "key": "group_638ff283dacaa",
+    "title": "Настройки бренда глобальные",
+    "fields": [
+        {
+            "key": "field_638ff4c15d4a5",
+            "label": "Рейтинг",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63907cf15cbc1",
+            "label": "Настройки",
+            "name": "rating_fields",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_63921f4c762da",
+                    "label": "Стиль",
+                    "name": "rating_stars_style",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "stars": "Рейтинг, звёздочки",
+                        "text": "Рейтинг, звёздочка, разделитель, текст",
+                        "background": "Заголовком, рейтинг, фон, внутренний отступ"
+                    },
+                    "default_value": "text",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6391ec7ef5cb7",
+                    "label": "Заголовок",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_63907d2b5cbc2",
+                    "label": "Значение",
+                    "name": "value",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "5.0",
+                    "placeholder": "5.0",
+                    "prepend": "",
+                    "append": "",
+                    "min": "1.0",
+                    "max": "5.0",
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_63907f54102f8",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63921f4c762da",
+                                "operator": "!=",
+                                "value": "stars"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_63909d4c79590",
+                    "label": "Количество звёзд",
+                    "name": "count_stars",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "one": "Одна",
+                        "five": "Пять"
+                    },
+                    "default_value": "one",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6397e57cb02d0",
+                    "label": "Настройки цвета",
+                    "name": "stars_colors",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63921f4c762da",
+                                "operator": "==",
+                                "value": "background"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6397e59eb02d1",
+                            "label": "Цвет фона",
+                            "name": "background_stars",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6397e5bdb02d2",
+                            "label": "Цвет текста",
+                            "name": "color_text",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "brand-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1670900656
+}

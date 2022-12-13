@@ -1,0 +1,14 @@
+.primary-nav {
+
+  .primary-nav_divider {
+
+    .menu-depth-0__item {
+      padding: 0 20px;
+
+      &:not(:last-of-type) {
+        margin-right: unset;
+        border-right: 1px solid #DDDDDD;
+      }
+    }
+  }
+}

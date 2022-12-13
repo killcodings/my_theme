@@ -1,0 +1,668 @@
+{
+    "key": "group_638f2c5c4f134",
+    "title": "Блок рейтинг",
+    "fields": [
+        {
+            "key": "field_6391e7e79c88b",
+            "label": "Настройки",
+            "name": "rating_fields_page",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_63921b2c7efd9",
+                    "label": "Стиль",
+                    "name": "rating_stars_style",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "stars": "Рейтинг, звёздочки",
+                        "text": "Рейтинг, звёздочка, разделитель, текст",
+                        "background": "Заголовком, рейтинг, фон, внутренний отступ"
+                    },
+                    "default_value": "text",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6391ec214db6e",
+                    "label": "Заголовок",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6391d54c60585",
+                    "label": "Значение",
+                    "name": "value",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "5.0",
+                    "placeholder": "5.0",
+                    "prepend": "",
+                    "append": "",
+                    "min": "1.0",
+                    "max": "5.0",
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_6391d5a260586",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63921b2c7efd9",
+                                "operator": "!=",
+                                "value": "stars"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6391eab14db6d",
+                    "label": "Количество звёзд",
+                    "name": "count_stars",
+                    "type": "select",
+                    "instructions": "one : Одна\r\nfive : Пять",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63921b2c7efd9",
+                                "operator": "!=",
+                                "value": "text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "one": "Одна",
+                        "five": "Пять"
+                    },
+                    "default_value": "one",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_63973531a3ddd",
+                    "label": "Настройки цвета",
+                    "name": "stars_colors",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63921b2c7efd9",
+                                "operator": "==",
+                                "value": "background"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63973586a3dde",
+                            "label": "Цвет фона",
+                            "name": "background_stars",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_639737bda3ddf",
+                            "label": "Цвет текста",
+                            "name": "color_text",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_638f2c7a5ad05",
+                    "label": "Кнопки в блоке",
+                    "name": "rating_block_buttons",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_638f2e355ad06",
+                            "label": "Включить кнопки",
+                            "name": "is_change_buttons",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_638f2edd5ad07",
+                            "label": "Добавить кнопки",
+                            "name": "add_buttons",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 2,
+                            "layout": "table",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_638f30b55ad08",
+                                    "label": "Кнопка",
+                                    "name": "button",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "return_format": "array",
+                                    "parent_repeater": "field_638f2edd5ad07"
+                                },
+                                {
+                                    "key": "field_638f31205ad09",
+                                    "label": "Изображение в кнопке",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "return_format": "id",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "parent_repeater": "field_638f2edd5ad07"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_6390ca1a2731a",
+                            "label": "Колонки",
+                            "name": "columns",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "min": 1,
+                            "max": 2,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6391d5fa60587",
+                            "label": "Настройки цвета кнопки",
+                            "name": "buttons_color",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6391d61e60588",
+                                    "label": "Цвет фона",
+                                    "name": "background",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": "",
+                                    "enable_opacity": 1,
+                                    "return_format": "string"
+                                },
+                                {
+                                    "key": "field_6391d65460589",
+                                    "label": "Цвет фона при наведении",
+                                    "name": "background_hover",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": "",
+                                    "enable_opacity": 0,
+                                    "return_format": "string"
+                                },
+                                {
+                                    "key": "field_6391d6806058a",
+                                    "label": "Цвет текста",
+                                    "name": "color",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": "",
+                                    "enable_opacity": 0,
+                                    "return_format": "string"
+                                },
+                                {
+                                    "key": "field_6391d6a86058b",
+                                    "label": "Цвет текста при наведении",
+                                    "name": "color_hover",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": "",
+                                    "enable_opacity": 0,
+                                    "return_format": "string"
+                                },
+                                {
+                                    "key": "field_6391d6cf6058c",
+                                    "label": "Цвет обводки",
+                                    "name": "border",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": "",
+                                    "enable_opacity": 1,
+                                    "return_format": "string"
+                                },
+                                {
+                                    "key": "field_6391d7446058d",
+                                    "label": "Цвет обводки при наведении",
+                                    "name": "border_hover",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": "",
+                                    "enable_opacity": 1,
+                                    "return_format": "string"
+                                },
+                                {
+                                    "key": "field_6391d79b6058e",
+                                    "label": "Радиус обводки",
+                                    "name": "border_radius",
+                                    "type": "range",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "default_value": 50,
+                                    "min": 0,
+                                    "max": 60,
+                                    "step": 1,
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6391d7fa6058f",
+                                    "label": "Тип обводки",
+                                    "name": "border_style",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "choices": {
+                                        "dashed": "Точки",
+                                        "solid": "Сплошной"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_6391d84660590",
+                                    "label": "Цвета для градиента",
+                                    "name": "gradient_colors",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6391d86160591",
+                                            "label": "Первый цвет",
+                                            "name": "start_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "wpml_cf_preferences": 1,
+                                            "default_value": "",
+                                            "enable_opacity": 1,
+                                            "return_format": "string"
+                                        },
+                                        {
+                                            "key": "field_6391d89960592",
+                                            "label": "Второй цвет",
+                                            "name": "end_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "wpml_cf_preferences": 1,
+                                            "default_value": "",
+                                            "enable_opacity": 1,
+                                            "return_format": "string"
+                                        },
+                                        {
+                                            "key": "field_6391d8de60593",
+                                            "label": "Цвет текста",
+                                            "name": "color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "wpml_cf_preferences": 1,
+                                            "default_value": "",
+                                            "enable_opacity": 0,
+                                            "return_format": "string"
+                                        },
+                                        {
+                                            "key": "field_6391d90160594",
+                                            "label": "Цвет текста при наведении",
+                                            "name": "color_hover",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "wpml_cf_preferences": 1,
+                                            "default_value": "",
+                                            "enable_opacity": 0,
+                                            "return_format": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_639364379ed56",
+                            "label": "Расположение картинки в кнопке",
+                            "name": "position_image_buttons",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "top": "Сверху",
+                                "left": "Слева"
+                            },
+                            "default_value": "top",
+                            "allow_null": 1,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_63936e684bc0d",
+                    "label": "Фон",
+                    "name": "background_rating_block",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/rating-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1670929804
+}

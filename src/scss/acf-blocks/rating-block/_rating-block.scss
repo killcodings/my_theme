@@ -1,0 +1,9 @@
+@use "src/scss/components/rating-stars/rating-stars";
+
+.rating-block {
+  padding: 32px;
+
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
+}

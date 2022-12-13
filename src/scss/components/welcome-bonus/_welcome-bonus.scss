@@ -1,0 +1,19 @@
+@use "src/scss/base/mixins";
+
+.welcome-bonus {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+
+  &__icon {
+    @include mixins.sizeRatio(64px);
+    align-items: center;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgB7VbtUcMwDJV7HSAb1EyQbEDYACYoG4QNMkLZoGUCukHLBJAJYiZomMBIRM0pru0kd70cP/ruFH/oWZIVnW0FEVhrU2wyFKOU+ojwEmyIS20T44YMaJSD7aNGKT3cAuXk4a6mOKttGKXglhFezTsfdLgWizYcQG77QRQsZ3wyRztBFGMcvjP54MwnbJhwEgFc7ETwtq79hcdnw23PCBYCzb8IneZ+zjqJxGeDsOSIUo8y4wh3zrwRzr6oT6kUDnKhN6i75z5Vb6V44gjzIKeU3sF80Etn4gHalMWQo5yL4RGlGuBrlK4AXYc15vk7tpqqUgx/kG8G+L3xAmaGu8NMVFwImein1t3CJXTM4R6m4RUmglJaw3yoFH05jSRbbncob4FFlNIN9+nkCVXpGuUZ2pPrCdorzvyllCvNiN9ByqPPivPPqghPnjAdZ/YqvTm8Ofz/DpeBeXq/hJ558mWwGsnroOSArx4N1wUdIt0l76a0geujZ9PdoYb2rBx+wI7HXr7qfgFC7GNjj1btfgAAAABJRU5ErkJggg==) no-repeat 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #FFDA44;
+  }
+}

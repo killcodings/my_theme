@@ -1,0 +1,34 @@
+@use "media-text_border-radius";
+@use "media-text_bg";
+@use "src/scss/components/welcome-bonus/welcome-bonus";
+@use "src/scss/components/rating-stars/rating-stars";
+@use "src/scss/base/mixins";
+
+.media-text {
+  display: grid;
+  gap: 0 64px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  background: var(--background);
+
+  &__content {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //position: relative;
+
+    >*:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__heading {
+
+  }
+
+  &__media {
+    align-self: flex-end;
+  }
+
+}

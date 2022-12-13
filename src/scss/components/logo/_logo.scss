@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: var(--logo-max-width);
+  }
+}

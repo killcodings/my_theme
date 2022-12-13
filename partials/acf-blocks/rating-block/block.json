@@ -1,0 +1,14 @@
+{
+  "name": "acf/testimonial",
+  "title": "Блок рейтинг",
+  "description": "Block rating",
+  "style": [ "file:./test.css" ],
+  "category": "formatting",
+  "icon": "star-filled",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "rating-block.php"
+  },
+  "align": "full"
+}

@@ -1,0 +1,18 @@
+.header {
+
+  &_divider {
+
+    .header__block {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: calc(var(--offsets18)*-1);
+        left: 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "src/scss/components/button/button";
+
+.buttons {
+  display: grid;
+  grid-template-rows: auto;
+  grid-area: buttons;
+  gap: 16px 16px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  &_columns-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 16px;
+    justify-content: var(--position-btn);
+    justify-self: var(--position-btn);
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

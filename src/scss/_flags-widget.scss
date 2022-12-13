@@ -1,0 +1,14 @@
+.flags-widget {
+  display: flex;
+  justify-content: center;
+
+  .wpml-ls-sidebars-language-flags {
+    padding: unset !important;
+  }
+
+  @media (max-width: 1000px) {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
