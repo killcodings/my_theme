@@ -1,6 +1,6 @@
 <?php
-$heading_logo  = get_field( 'heading_logo'); // изображение
-$heading       = get_field( 'heading' ); // текст
+$heading_logo  = get_field( 'heading_logo');
+$heading       = get_field( 'heading' );
 $heading_tag   = get_field( 'heading_tag' ) ?? 'h2';
 $heading_class = 'head';
 $heading_logo_bg = get_field('heading_logo_bg');
@@ -18,7 +18,9 @@ if ( $heading_tag === 'h1' ) {
 acf_block_before( 'Заголовок с логотипом', $is_preview );
 ?>
     <div class="<?=$heading_class?>">
+        <?php if( $heading_logo ) : ?>
         <div class="head__logo" style="--background-logo:url(<?= $logo_url ?>);--background-logo-color:<?= $heading_logo_bg ?>" ></div>
+        <?php endif; ?>
 	    <?= "<$heading_tag class='{$heading_class}__heading heading'>" . $heading . "</$heading_tag>" ?>
     </div>
 

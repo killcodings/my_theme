@@ -16,7 +16,7 @@
     --end-gradient: calc(100% - var(--percent));
     font-size: 20px;
     line-height: 20px;
-    background: linear-gradient(90deg,#fec84b var(--percent),#000 var(--end-gradient));
+    background: linear-gradient(90deg,var(--color-stars-start) var(--percent),var(--color-stars-end) var(--end-gradient));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

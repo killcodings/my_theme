@@ -916,6 +916,8 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bg": "Фон с отступом, скругление углов",
+                "padding": "Заданный внутренний отступ, фон, скругление углов",
+                "imageCenter": "Заданный внутренний отступ, фон, скругление углов, картинка по центру",
                 "noBg": "Без фона"
             },
             "default_value": "noBg",
@@ -940,6 +942,20 @@
                         "operator": "==",
                         "value": "bg"
                     }
+                ],
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "padding"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "imageCenter"
+                    }
                 ]
             ],
             "wrapper": {
@@ -947,10 +963,10 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "default_value": "",
             "enable_opacity": 0,
-            "return_format": "string",
-            "wpml_cf_preferences": 1
+            "return_format": "string"
         },
         {
             "key": "field_6398747a2237c",
@@ -966,6 +982,113 @@
                         "operator": "==",
                         "value": "bg"
                     }
+                ],
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "padding"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "imageCenter"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "min": 0,
+            "max": 25,
+            "step": 2,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_639b29d9dd864",
+            "label": "Внутренний отступ",
+            "name": "media_text_inner_padding",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "bg"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "padding"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63986b916d32e",
+                        "operator": "==",
+                        "value": "imageCenter"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 64,
+            "step": 2
+        },
+        {
+            "key": "field_639b3039ed516",
+            "label": "Растянуть картинку на всю ширину",
+            "name": "image_max_width",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_639b3508c12e5",
+            "label": "Выровнять картинку",
+            "name": "media_text_position_image",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639b3039ed516",
+                        "operator": "!=",
+                        "value": "1"
+                    }
                 ]
             ],
             "wrapper": {
@@ -973,12 +1096,39 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "min": 0,
-            "max": 25,
-            "step": 5,
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "center": "По центру",
+                "right": "Cправа"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_639b462cdd7a7",
+            "label": "Межстрочный отступ",
+            "name": "media_text_gap",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "placeholder": "",
             "prepend": "",
             "append": "",
+            "min": 0,
+            "max": 20,
+            "step": 5,
             "wpml_cf_preferences": 1
         }
     ],
@@ -1000,5 +1150,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670950408
+    "modified": 1671120622
 }

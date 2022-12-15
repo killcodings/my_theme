@@ -109,6 +109,7 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 	$relations_string = '';
 	if ( $relations ) {
 		$relations_string .= 'rel="' . implode( ', ', $relations ) . '"';
+        var_dump('$relations_string' .' '. $relations_string);
 	}
 
 	$button_url_parse = isset($button_url_parse['host']) ? $button_url_parse['host'] : null;

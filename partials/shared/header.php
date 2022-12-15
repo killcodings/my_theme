@@ -120,7 +120,7 @@ $header_panel_colors = get_field( 'header_panel_colors', 'options' );
             <div class="header__widget">
 				<?php dynamic_sidebar( 'language-flags' ); ?>
             </div>
-			<?php // TODO dgdhhe shift*2
+			<?php
 			if ( has_nav_menu( 'primary' ) ): ?> <!--если одно меню, то не проверять-->
                 <div class="header__burger burger">
                     <span></span><span></span><span></span>

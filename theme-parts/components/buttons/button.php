@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 $button['url'] = $args['button']['url'];
 $button['title'] = $args['button']['title'];
 
@@ -12,6 +12,7 @@ $button_icon = "<span class = 'button__image' style = 'background-image: url($ic
 
 
 echo app_get_button( $button, '', $button['relations'], $button_colors, $button_icon );
+*/
 
 
 

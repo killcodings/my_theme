@@ -1,9 +1,15 @@
 @use "src/scss/components/rating-stars/rating-stars";
 
 .rating-block {
-  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
 
-  @media (max-width: 600px) {
-    padding: 16px;
+  &_padding {
+    padding: 32px;
+
+    @media (max-width: 600px) {
+      padding: 16px;
+    }
   }
 }

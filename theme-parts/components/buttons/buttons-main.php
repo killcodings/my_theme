@@ -1,10 +1,9 @@
 <?php
-$buttons = $args['buttons'];
+$buttons = $args['add_buttons'];
 $columns = $args['columns'];
 $buttons_color = $args['buttons_color'];
 
-
-$position_image = match($args['position_image']) {
+$position_image = match($args['position_image_buttons']) {
     'top' => 'button_column',
     'left' => '',
     false => '',
@@ -24,7 +23,7 @@ $position_image = match($args['position_image']) {
 	        $button_icon = "<span class = 'button__image' style = 'background-image: url($icon_url);'></span>";
         }
 
-	    echo app_get_button( $button['button'], "buttons__item button_custom_color $position_image", $button['relations'], $buttons_color, $button_icon );
+	    echo app_get_button( $button['button'], "buttons__item button_custom_color $position_image",null, $buttons_color, $button_icon );
     } ?>
 </div>
 

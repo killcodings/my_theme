@@ -108,6 +108,7 @@ add_action( 'acf/init', function () {
 		acf_create_block( 'rating-block', 'Блок рейтинг', 'rating-block/rating-block', true );
 		acf_create_block( 'media-text', 'Текст и изображение', 'media-text/media-text', true );
 		acf_create_block( 'head', 'Заголовок с логотипом', 'head/head' );
+		acf_create_block( 'buttons', 'Кнопки', 'buttons/buttons' );
 
 
 		acf_create_block( 'image', 'Изображение', 'image' );

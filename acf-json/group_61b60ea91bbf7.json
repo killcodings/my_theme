@@ -141,10 +141,10 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
             "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
         }
@@ -167,5 +167,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670954514
+    "modified": 1671111250
 }
