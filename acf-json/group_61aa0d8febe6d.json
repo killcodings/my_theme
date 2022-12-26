@@ -3170,6 +3170,26 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_63a9d7e360303",
+                    "label": "With promocode",
+                    "name": "with_promocode",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_63594a4fcb054",
                     "label": "Ссылка",
                     "name": "link",
@@ -3238,6 +3258,27 @@
                     "enable_opacity": 0,
                     "return_format": "string",
                     "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_63a9d517042e2",
+                    "label": "Закругления углов",
+                    "name": "border_radius",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": 16,
+                    "step": 2,
+                    "prepend": "",
+                    "append": "",
+                    "wpml_cf_preferences": 1
                 }
             ]
         }
@@ -3260,5 +3301,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670200853
+    "modified": 1672075519
 }

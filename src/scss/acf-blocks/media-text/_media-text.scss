@@ -13,20 +13,21 @@
   background: var(--background);
   $this: &;
 
-  &__content {
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //position: relative;
-
-    >*:not(:last-child) {
-      margin-bottom: var(--media-text-gap);
-    }
+  &_vertical {
+    gap: 20px 0;
+    grid-template-columns: 1fr;
   }
 
   &_padding-bg {
     padding: var(--media-text-padding);
     border-radius: var(--border-radius);
+  }
+
+  &__content {
+
+    >*:not(:last-child) {
+      margin-bottom: var(--media-text-gap);
+    }
   }
 
   &__media {
@@ -37,6 +38,7 @@
 
     img {
       width: var(--media-image-max-width);
+      height: var(--media-image-max-width);
     }
   }
 
@@ -46,6 +48,9 @@
       justify-content: flex-end;
       display: flex;
     }
+  }
+
+  &_vertical {
 
   }
 

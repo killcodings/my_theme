@@ -11,8 +11,11 @@ $buttons_main_setting = [
 	'position_image_buttons' => $position_image_buttons
 ];
 
-echo get_component( 'buttons/buttons-main', $buttons_main_setting );
+acf_block_before( 'Кнопки', $is_preview );
 
+	echo get_component( 'buttons/buttons-main', $buttons_main_setting );
+
+acf_block_after( $is_preview );
 
 
 

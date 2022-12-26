@@ -87,6 +87,10 @@
       }
     }
 
+    &-native {
+      order: 2;
+    }
+
     &-flag {
       border-radius: 50%;
       @include mixins.sizeRatio(23px);

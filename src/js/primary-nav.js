@@ -30,6 +30,11 @@ export default class PrimaryNav {
                 if (isHeaderWidget && primaryNavAddWidget) {
                     const clonePrimaryNavAddWidget = isHeaderWidget.cloneNode(true);
                     primaryNav.append(clonePrimaryNavAddWidget);
+                    const widgets = document.querySelectorAll('.widget');
+                    const wpmlSubMenu = document.querySelectorAll('.wpml-ls-sub-menu');
+                    if (widgets[0]) {
+                        wpmlSubMenu[0].style.top = '-160%';
+                    }
                 }
             }
             oneRemove();

@@ -38,7 +38,7 @@ if ( $reverse ) {
 
 $is_style_media_text = get_field('is_style_media_text') ?? false;
 
-$style = match ($is_style_media_text) {
+$style_class = match ($is_style_media_text) {
 	'bg' => ' media-text_bg media-text_border-radius',
     'padding' => ' media-text_padding-bg',
     'imageCenter' => ' media-text_padding-bg media-text_image-center',
@@ -62,9 +62,14 @@ $media_text_border_radius = get_field('media_text_border_radius') ?: '0';
 $media_text_inner_padding = get_field('media_text_inner_padding') ?: 'auto';
 $image_max_width = get_field('image_max_width') ? '100%' : 'auto';
 $media_text_gap = get_field('media_text_gap') ?? '20';
+$media_text_vertical = get_field('media_text_vertical') ?? false;
 $style_string     = "--background:$background_color;color:$color_text;--border-radius:{$media_text_border_radius}px;--media-text-padding:{$media_text_inner_padding}px;--media-image-max-width:$image_max_width;--media-text-gap:{$media_text_gap}px;";
 
-$main_class .= $style;
+$main_class .= $style_class;
+
+if ($media_text_vertical) {
+	$main_class .= ' media-text_vertical';
+}
 
 $is_add_buttons = get_field( 'is_add_buttons' ) ?? false;
 $button_class   = 'media-text__button';
@@ -91,7 +96,6 @@ acf_block_before( 'Изображение и текст', $is_preview );
 			    <?php
 			    foreach ( $buttons as $button ):
 				    $button_style = $button['button_style'] ? 'button_' . $button['button_style'] : 'button_outline';
-
 				    // Откуда берется URL для кнопки: из глобальных настроек (choose_link) или ввести в инпуте (input_link)
 				    $choose_link = $button['choose'];
 				    if ( $choose_link === 'input_link' ) {

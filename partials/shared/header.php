@@ -137,7 +137,7 @@ $header_panel_colors = get_field( 'header_panel_colors', 'options' );
 			get_field( 'settings', 'options' );
 
 		if ( $settings['link'] ) {
-			get_template_part( "theme-parts/components/header-bonus", null, $settings );
+			get_template_part( "theme-parts/components/header-bonus/header-bonus", null, $settings );
 		}
 	endif; ?>
 </header>

@@ -884,6 +884,26 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_63a1df048637e",
+            "label": "Вертикально",
+            "name": "media_text_vertical",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "wpml_cf_preferences": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_63986b5d6d32d",
             "label": "Стиль",
             "name": "",
@@ -1150,5 +1170,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671120622
+    "modified": 1671554769
 }

@@ -1,31 +1,29 @@
-@use "arrow";
-
-@mixin size($w) {
-  width: $w;
-  height: $w;
-}
+@use "../../base/mixins";
 
 .header-bonus {
   background: var(--background);
   position: absolute;
   width: 100%;
-  padding: 4px 0;
+  padding: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
 
   &__block {
     display: grid;
-    grid-template-columns: 34px 1fr;
+    grid-template-columns: 64px 1fr;
     gap: 16px;
     align-items: center;
     justify-content: center;
-    width: 255px;
-    margin: 0 auto;
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "title button"
+        "description button";
   }
 
   &__title {
@@ -34,28 +32,34 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-heading);
+    grid-area: title;
+  }
+
+  &__description {
+    grid-area: description;
   }
 
   &__logo {
     border-radius: 50%;
     overflow: hidden;
-    @include size(34px);
+    @include mixins.sizeRatio(64px);
 
     .image-func {
 
       img {
-        @include size(34px);
+        @include mixins.sizeRatio(64px);
       }
     }
   }
 
   &__button {
-    all: unset;
+    grid-area: button;
+/*    all: unset;
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
     position: relative;
     text-decoration: underline;
-    color: var(--color-link);
+    color: var(--color-link);*/
   }
 }

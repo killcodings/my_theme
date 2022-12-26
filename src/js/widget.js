@@ -5,17 +5,18 @@ export default class Widget {
 
     init() {
         const widgets = document.querySelectorAll('.widget');
-
-        let wpmlSubMenu = document.querySelectorAll('.wpml-ls-sub-menu');
-        let widgetSubMenu = document.querySelector('.wpml-ls-sub-menu');
-
         const windowWidth = window.innerWidth;
         if (windowWidth <= 1000) {
-            if (widgets[0]) {
-                wpmlSubMenu[0].style.top = '-160%';
-            }
+
         }
         [...widgets].forEach((el) => {
+
+            const wpmlLanguageNames = el.querySelectorAll('.wpml-ls-native');
+            [...wpmlLanguageNames].forEach((e) => {
+                if (e.textContent === "English") {
+                    e.textContent = "En";
+                }
+            })
 
 
             el.addEventListener('click', () => {

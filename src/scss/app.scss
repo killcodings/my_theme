@@ -7,11 +7,14 @@
 
 // Components
 @use "components/header/header";
+@use "components/header-bonus/header-bonus";
+
 
 // ACF Blocks
 @use "acf-blocks/buttons/buttons";
 @use "acf-blocks/rating-block/rating-block";
 @use "acf-blocks/head/head";
+@use "acf-blocks/promocode/promocode-coins";
 
 
 
@@ -62,7 +65,7 @@
 @import "wp-block-columns";
 @import "404";
 //@import "bonus-button";
-@import "header-bonus";
+
 
 
 // ACF Blocks
