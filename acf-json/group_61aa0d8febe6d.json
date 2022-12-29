@@ -3212,21 +3212,29 @@
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63ab01ec9d6f4",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "default_value": "#fff",
                     "enable_opacity": 0,
-                    "return_format": "string",
-                    "wpml_cf_preferences": 3
+                    "return_format": "string"
                 },
                 {
                     "key": "field_63595af7b9da8",
-                    "label": "Цвет заголовка",
-                    "name": "color-heading",
+                    "label": "Цвет текста",
+                    "name": "color-text",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -3236,28 +3244,10 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 1,
                     "default_value": "",
                     "enable_opacity": 0,
-                    "return_format": "string",
-                    "wpml_cf_preferences": 1
-                },
-                {
-                    "key": "field_63595d2cd5321",
-                    "label": "Цвет ссылки",
-                    "name": "color-link",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "enable_opacity": 0,
-                    "return_format": "string",
-                    "wpml_cf_preferences": 1
+                    "return_format": "string"
                 },
                 {
                     "key": "field_63a9d517042e2",
@@ -3266,19 +3256,47 @@
                     "type": "range",
                     "instructions": "",
                     "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63ab01ec9d6f4",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "min": "",
+                    "max": 16,
+                    "step": 2,
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_63ab01ec9d6f4",
+                    "label": "Штрихпунктирная обводка",
+                    "name": "border_dashed",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "min": "",
-                    "max": 16,
-                    "step": 2,
-                    "prepend": "",
-                    "append": "",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         }
@@ -3301,5 +3319,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672075519
+    "modified": 1672155368
 }

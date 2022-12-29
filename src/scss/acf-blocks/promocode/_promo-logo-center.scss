@@ -1,0 +1,76 @@
+@use "../../base/mixins";
+@use "inputs";
+
+.promo-logo-center {
+  $margin-content: 20px;
+  $this:&;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  padding: 47px 16px 16px 16px;
+  gap: 10px 0;
+  margin-top: calc(32px + #{$margin-content});
+
+  &__logo {
+    @include mixins.sizeRatio(64px);
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius-logo, 16px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+
+    .icon {
+      position: absolute;
+      @include mixins.sizeRatio(64px);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #434343;
+  }
+
+  &_version-3 {
+    padding: 16px;
+    margin-top: unset;
+    #{$this}__logo {
+      position: unset;
+      transform: unset;
+      margin: 0 auto;
+    }
+
+    #{$this}__description {
+      order: 1;
+    }
+
+    .inputs {
+      order: 2;
+
+    }
+
+    .button {
+      order: 3;
+    }
+
+  }
+
+}

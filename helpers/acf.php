@@ -109,7 +109,7 @@ add_action( 'acf/init', function () {
 		acf_create_block( 'media-text', 'Текст и изображение', 'media-text/media-text', true );
 		acf_create_block( 'head', 'Заголовок с логотипом', 'head/head' );
 		acf_create_block( 'buttons', 'Кнопки', 'buttons/buttons' );
-		acf_create_block( 'promocode-coins', 'Промокод с монетами', 'promocode/promocode-coins' );
+		acf_create_block( 'promo-block', 'Блок промокод с вариациями', 'promo/promo-block' );
 
 
 		acf_create_block( 'image', 'Изображение', 'image' );

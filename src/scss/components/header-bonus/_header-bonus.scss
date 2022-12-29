@@ -1,47 +1,35 @@
 @use "../../base/mixins";
 
 .header-bonus {
-  background: var(--background);
+  background: var(--background-color);
   position: absolute;
   width: 100%;
   padding: 16px;
   max-width: 480px;
   margin: 0 auto;
   border-radius: var(--border-radius);
+  color: var(--color-text);
+  //background-color: transparent;
+  //background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAd8AAABgCAYAAABc63hMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQuSURBVHgB7d1LThtJHAfgbvNYgJB8g3FOwHCCwAlmeBlYBZ8g3CDODeAETlYYEDA5Ab4BMyfAuQELYMPDUzWaQQzgjiCmSDvfJ6GyXP5bVEvun8vV6sqzZ9jZ2TnO87wWHlbv99Xr9byodnd3t1fUX1S/vb1dGxkZOSko74b6N2WtD8e0s7y8PNevPxy7t6HplLh+PTStrL9P4fg1ylofxt8M4//Yr39vb+9Dr9drlrU+jD+Ofb1ff6VSWV9aWvpc1vow/rkw/k5B/VFoZktcH889tX794dxUW1xc/FrW+pfMnoL60/CZ6l5cXMw1Go3T7KWFf+LXVqtVzQDgJxVzMHypnc0GKb6pgAWAp/tWflYeezL+PDoxMXE8NTX1WwYAPEnMz7BEe7K/v//LY/0Pwvfg4GA6rJ0chfWDzaL1EwDgcTE/wzr25tXVVafdbk/f7//fAnOc8cbgDQVNwQsA3yfMft+Fpjk6Ojp794Ky25lv/H3ajBcABmdlZeV2Bnx3Hfg2fKvVarzUu1mv17cyAGAgwoR2K+ZrBgAAAAAAAMBwcBcrAEirMjk5eTTwe1MCAA/EvRHC33El7k50dnb2ZwYAvKixsbFuFndn+tY2SwDA4MTcrWQAQFLCFwASE74AkJjwBQAAAAAAAAAAAAAAAAAAAGD42VgBANKxsQIAvALhCwCJCV8ASEz4AkBiwhcAEhO+AJCY8AUAAAAAAAAAAAAAAAAAAABg+NnPFwDSsZ8vALwC4QsAiQlfAEhM+AJAYsIXABITvgCQmPAFAAAAAAAAAAAAAAAAAAAAYPjZzxcA0rGfLwC8AuELAIkJXwBITPgCQGLCFwASE74AkJjwBQAAAAAAAAAAAAAAAAAAAGD42c8XANKxny8AvALhCwCJCV8ASEz4AkBilTzPT1utVjUDAF7U4eFhzNvTSq/X646Pj9cyAOBFXV5eToemmwEA6fi1GQAAAAAAAGBIxAXgnZ2ddxkAMFAxX+9eaHV7k41qtZrled5st9vvMwBgIHZ3d9/HfL373G34zs/Pn15fX89VKpUNM2AA+H7/5unGyMjIbKPROP3v+fz+Cw8ODqavrq7+uLm52VxdXd3KAIAnizPe0GyMjo7+vrCw8Nfdvgf3do4vMAMGgOe7O+O9H7zRoxsrrK2tdcfGxmYuLi6+ZADAk4yPj385Pz+fWVxc/JoNSphKv3V7LAB+ZjEH2+32dPYM+RNf/8+ODGFN+Cg8rPV6vQcBXK/XC98zBHevqL+ofnt7uxam8CcF5d1Q/6as9Xmed5aXl+f69ccvPaHplLh+PTStrL9P4fg1ylofr2YM4//Yr39vb+9D+Mw0y1ofxh/Hvt6vPyxVrS8tLX0ua30Y/1wYf6egPp73ZktcH889tX794dxUK5ql/ej1L5k9/erjroCh6YbjPpM90d/mcgODRFDAqwAAAABJRU5ErkJggg==");
+  //background-size: 100% 100%;
+  $this: &;
 
   &__block {
     display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 16px;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+          "logo content button";
+    //gap: 16px;
     align-items: center;
     justify-content: center;
   }
 
-  &__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "title button"
-        "description button";
-  }
-
-  &__title {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    text-align: center;
-    color: var(--color-heading);
-    grid-area: title;
-  }
-
-  &__description {
-    grid-area: description;
-  }
 
   &__logo {
+    grid-area: logo;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 16px;
     @include mixins.sizeRatio(64px);
 
     .image-func {
@@ -52,8 +40,28 @@
     }
   }
 
+  &__content {
+    grid-area: content;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    //grid-area: title;
+  }
+
+  &__description {
+    //grid-area: description;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
   &__button {
     grid-area: button;
+    align-self: center;
 /*    all: unset;
     font-weight: 700;
     font-size: 14px;
