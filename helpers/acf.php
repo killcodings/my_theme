@@ -72,7 +72,8 @@ add_action( 'acf/init', function () {
 			'menu_title' => 'Настройки',
 			'slug'       => 'advanced-options',
 			'autoload'   => true,
-			'icon_url'   => 'dashicons-hammer',
+			'icon_url'   => 'dashicons-buddicons-activity',
+//			dashicons-admin-customizer
 		] );
 
 		acf_add_options_page( [
@@ -128,5 +129,5 @@ add_action( 'acf/init', function () {
 	}
 } );
 
-//register_block_type( get_template_directory() . '/partials/acf-blocks/rating-block' );
+register_block_type( get_template_directory() . '/partials/acf-blocks/rating-block' );
 //register_block_type( get_template_directory() . '/partials/acf-blocks/media-text' );

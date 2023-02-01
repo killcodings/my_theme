@@ -4,15 +4,15 @@ $rating_fields_page    = get_field( 'rating_fields_page', $post->ID );
 $rating_fields_buttons = $rating_fields_page['rating_block_buttons'];
 
 
-$heading                 = $rating_fields_page['heading'] ?: $rating_fields_page['heading'];
-$rating_value            = $rating_fields_page['value'] ?: $rating_fields_page['value'];
-$text                    = $rating_fields_page['text'] ?: $rating_fields_page['text'];
-$count_stars             = $rating_fields_page['count_stars'] ?: $rating_fields_page['count_stars'];
+$heading                 = $rating_fields_page['heading'] ?: $rating_fields_global['heading'];
+$rating_value            = $rating_fields_page['value'] ?: $rating_fields_global['value'];
+$text                    = $rating_fields_page['text'] ?: $rating_fields_global['text'];
+$count_stars             = $rating_fields_page['count_stars'] ?: $rating_fields_global['count_stars'];
 $rating_stars_style      = $rating_fields_page['rating_stars_style'] ?? false;
 $background_rating_block = $rating_fields_page['background_rating_block'] ?? false;
 $stars_colors            = $rating_fields_page['stars_colors'];
 $inner_padding           = $rating_fields_page['inner_padding'] ?? false;
-$color_stars =  $rating_fields_page['color_stars'];
+$color_stars             = $rating_fields_page['color_stars'];
 
 $rating_stars_setting = [
 	'heading'            => $heading,

@@ -103,7 +103,7 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$border_hover     = $custom_colors['border_hover'] ?: '#fff';
 		$border_style     = $custom_colors['border_style'] ?: 'solid';
 		$border_radius    = $custom_colors['border_radius'] ?? '5';
-		$style_string     = "style='--background-color:{$background};--background-color-hover:{$background_hover};--color:{$color};--color-hover:{$color_hover};--border:{$border};--border-hover:{$border_hover};--border-style:{$border_style};--buttons-border-radius:{$border_radius}px'";
+		$style_string     = "style='--buttons-background:{$background};--buttons-background-hover:{$background_hover};--buttons-color:{$color};--buttons-color-hover:{$color_hover};--buttons-border:{$border};--buttons-border-hover:{$border_hover};--buttons-border-style:{$border_style};--buttons-border-radius:{$border_radius}px'";
 	}
 
 	$relations_string = '';

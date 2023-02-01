@@ -10,11 +10,11 @@ $header_panel_colors = get_field( 'header_panel_colors', 'options' );
             <div class="header__logo logo">
 				<?php
 				$header_logotype = get_field( 'header_logotype', 'options' );
-				if ( $header_logotype ) ?>
+				if ( $header_logotype ) { ?>
                 <a class="logo__link" href="<?= home_url() ?>">
 					<?= app_get_image( [ 'id' => $header_logotype, 'classes' => 'logo__image' ] ) ?>
                 </a>
-				<?php ?>
+				<?php } ?>
             </div>
 
 			<?php
