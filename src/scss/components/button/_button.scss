@@ -10,13 +10,13 @@
   cursor: pointer;
   height: 48px;
   padding-left: 8px; padding-right: 8px;
-  max-width: var(--button-width, 100%);
+  width: var(--button-width);
   justify-self: var(--position-btn);
   background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 34.31%, var(--buttons-gradiend-end) 141.87%);
   background-color: var(--buttons-background);
   color: var(--buttons-color);
   //color: var(--buttons-gradiend-color);
-  border-radius: var(--buttons-border-radius);
+  border-radius: var(--buttons-border-radius, 0);
   border: 1px var(--buttons-border-style) var(--buttons-border);
   $this: &;
 
@@ -26,13 +26,23 @@
     //color: var(--buttons-gradiend-color-hover);
     background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 4.31%, var(--buttons-gradiend-end) 141.87%);
     background-color: var(--buttons-background-hover);
+
+    .button__icon {
+      use {
+        stroke: var(--buttons-color-hover);
+      }
+    }
+  }
+
+  @media (max-width: 1366px) {
+    width: unset;
+    max-width: var(--button-width, 100%);
   }
 
   @media (max-width: 600px) {
     max-width: 100%;
     width: 100%;
   }
-  width: var(--button-width, 100%);
 
   &__image {
     @include mixins.sizeRatio(20px);
@@ -48,6 +58,14 @@
 
     #{$this}__image {
       margin-bottom: 10px;
+    }
+  }
+  &__icon {
+    display: flex;
+    margin-left: 16px;
+    use {
+      transition: 0.3s;
+      stroke: var(--buttons-color);
     }
   }
 

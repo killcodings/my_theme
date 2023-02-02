@@ -59,11 +59,11 @@ $margin = match (get_field('media_text_position_image')) {
 $background_color = get_field( 'background_color' ) ?: '';
 $color_text = get_field( 'color_text' ) ?: '';
 $media_text_border_radius = get_field('media_text_border_radius') ?: '0';
-$media_text_inner_padding = get_field('media_text_inner_padding') ?: 'auto';
+$media_text_inner_padding = get_field('media_text_inner_padding') ? get_field('media_text_inner_padding').'px' : 'auto';
 $image_max_width = get_field('image_max_width') ? '100%' : 'auto';
 $media_text_gap = get_field('media_text_gap') ?? '20';
 $media_text_vertical = get_field('media_text_vertical') ?? false;
-$style_string     = "--background:$background_color;color:$color_text;--border-radius:{$media_text_border_radius}px;--media-text-padding:{$media_text_inner_padding}px;--media-image-max-width:$image_max_width;--media-text-gap:{$media_text_gap}px;";
+$style_string     = "--background:$background_color;color:$color_text;--border-radius:{$media_text_border_radius}px;--media-text-padding:{$media_text_inner_padding};--media-image-max-width:$image_max_width;--media-text-gap:{$media_text_gap}px;";
 
 $main_class .= $style_class;
 

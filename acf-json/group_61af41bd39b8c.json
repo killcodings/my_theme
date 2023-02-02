@@ -731,7 +731,7 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "default_value": "",
+                    "default_value": "transparent",
                     "enable_opacity": 1,
                     "return_format": "string"
                 },
@@ -749,7 +749,7 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "default_value": "",
+                    "default_value": "transparent",
                     "enable_opacity": 1,
                     "return_format": "string"
                 },
@@ -767,7 +767,7 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "default_value": 50,
+                    "default_value": 0,
                     "min": 0,
                     "max": 50,
                     "step": "",
@@ -850,42 +850,6 @@
                             "wpml_cf_preferences": 1,
                             "default_value": "",
                             "enable_opacity": 1,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_61b1eac90dff2",
-                            "label": "Цвет текста",
-                            "name": "color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 1,
-                            "default_value": "",
-                            "enable_opacity": 0,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_61b1eadb0dff3",
-                            "label": "Цвет текста при наведении",
-                            "name": "color_hover",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 1,
-                            "default_value": "",
-                            "enable_opacity": 0,
                             "return_format": "string"
                         }
                     ]
@@ -1222,5 +1186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670897865
+    "modified": 1675298458
 }

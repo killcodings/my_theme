@@ -1,10 +1,10 @@
 {
-  "name": "acf/testimonial",
+  "name": "acf/media-text",
   "title": "Медиа и текст",
-  "description": "Media text",
-  "style": [ "file:./test.css" ],
-  "category": "formatting",
-  "icon": "block-default",
+  "description": "media-text",
+  "style": [ "file:./style.css" ],
+  "category": "media",
+  "icon": "embed-photo",
   "keywords": ["testimonial", "quote"],
   "acf": {
     "mode": "preview",

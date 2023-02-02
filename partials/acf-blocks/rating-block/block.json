@@ -1,5 +1,5 @@
 {
-  "name": "acf/testimonial",
+  "name": "acf/rating",
   "title": "Блок рейтинг",
   "description": "Block rating",
   "style": [ "file:./test.css" ],

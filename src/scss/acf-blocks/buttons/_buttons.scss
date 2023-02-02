@@ -9,7 +9,7 @@
     width: 100%;
   }
 
-  &_columns-2 {
+  &_columns-1 {
     grid-template-columns: 1fr 1fr;
     gap: 16px 16px;
     justify-content: var(--position-btn);
@@ -19,5 +19,4 @@
       grid-template-columns: 1fr;
     }
   }
-
 }

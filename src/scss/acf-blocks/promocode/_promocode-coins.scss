@@ -51,6 +51,8 @@
     gap: 0 16px;
 
     #{$this}__value {
+      display: flex;
+      align-items: center;
       border: 1px;
       border-color: var(--border-color);
       border-style: var(--border-style);
@@ -64,7 +66,7 @@
       padding: 0 26px;
       border-radius: 8px;
 
-      &__icon {
+      &__image {
         @include mixins.sizeRatio(20px);
         background-repeat: no-repeat;
         background-position: center;

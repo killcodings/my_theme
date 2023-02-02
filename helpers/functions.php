@@ -85,7 +85,7 @@ HTML;
 	return "";
 }
 
-function app_get_button( $button, $class = '', $relations = null, $custom_colors = null, $button_icon = false ): string {
+function app_get_button( $button, $class = '', $relations = null, $custom_colors = null, $button_image = false, $button_icon = false ): string {
 	$partner_links_type = get_field( 'out_links_type', 'options' ) ?? 'link';
 	if ( $button['url'] === '' ) {
 		return false;
@@ -102,8 +102,11 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$border           = $custom_colors['border'] ?: '#000';
 		$border_hover     = $custom_colors['border_hover'] ?: '#fff';
 		$border_style     = $custom_colors['border_style'] ?: 'solid';
-		$border_radius    = $custom_colors['border_radius'] ?? '5';
-		$style_string     = "style='--buttons-background:{$background};--buttons-background-hover:{$background_hover};--buttons-color:{$color};--buttons-color-hover:{$color_hover};--buttons-border:{$border};--buttons-border-hover:{$border_hover};--buttons-border-style:{$border_style};--buttons-border-radius:{$border_radius}px'";
+		$border_radius    = $custom_colors['border_radius'] ?? '0';
+		$background_gradient_start    = $custom_colors['gradient_colors']['start_color'] ?: 'transparent';
+		$background_gradient_end    = $custom_colors['gradient_colors']['end_color'] ?: 'transparent';
+
+		$style_string     = "style='--buttons-background:{$background};--buttons-background-hover:{$background_hover};--buttons-color:{$color};--buttons-color-hover:{$color_hover};--buttons-border:{$border};--buttons-border-hover:{$border_hover};--buttons-border-style:{$border_style};--buttons-border-radius:{$border_radius}px;--buttons-gradient-start:$background_gradient_start;--buttons-gradient-end:$background_gradient_end'";
 	}
 
 	$relations_string = '';
@@ -111,16 +114,24 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$relations_string .= 'rel="' . implode( ', ', $relations ) . '"';
         var_dump('$relations_string' .' '. $relations_string);
 	}
+	if ($button_icon) {
+		$button_icon_str    = '';
+		$button_icon_use = match ($button_icon) {
+			'arrow' => '<svg class="button__icon-item-arrow" width="12" height="11" fill="none"><use xlink:href="#button__icon-item-arrow"></use></svg>',
+			'comment' => '<svg class="button__icon-item-comment" width="17" height="18"  fill="none"><use xlink:href="#button__icon-item-comment"></use></svg>',
+			null => ''
+		};
+		$button_icon_str = "<span class ='button__icon'>$button_icon_use</span>";
+	}
 
 	$button_url_parse = isset($button_url_parse['host']) ? $button_url_parse['host'] : null;
 	if ( $button_url_parse === parse_url( home_url() )['host'] ) {
-		return "<a class='button $class' href='{$button['url']}' $style_string>$button_icon{$button['title']}</a>";
+		return "<a class='button $class' href='{$button['url']}' $style_string>$button_image{$button['title']}$button_icon_str</a>";
 	}
 	if ( $partner_links_type === 'link' ) {
-		return "<a class='button $class' href='{$button['url']}' $style_string rel='nofollow'>$button_icon{$button['title']}</a>";
+		return "<a class='button $class' href='{$button['url']}' $style_string rel='nofollow'>$button_image{$button['title']}$button_icon_str</a>";
 	}
-
-	return "<button class='button click-button $class' $style_string type='button' data-link='{$button['url']}'>$button_icon{$button['title']}</button>";
+	return "<button class='button click-button $class' $style_string type='button' data-link='{$button['url']}'>$button_image{$button['title']}$button_icon_str</button>";
 }
 
 function app_get_video( $args ) {

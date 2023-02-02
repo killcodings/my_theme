@@ -80,14 +80,14 @@ if ( $is_setting_inputs ) {
 		<?php if ( $args['is_setting_inputs'] ) : ?>
             <button class="promo-coins__button button"><?php
 				if ( $args['icon_button'] ) {
-					$button_icon = '';
+					$button_image = '';
 					$icon_url    = wp_get_attachment_image_url( $args['icon_button'] );
 					$icon_url    = app_get_image_url( $icon_url );
-					$button_icon = "<span class = 'button__icon' style = 'background-image: url($icon_url);'></span>";
+					$button_image = "<span class = 'button__image' style = 'background-image: url($icon_url);'></span>";
 				} else {
-					$button_icon = "<span class = 'button__icon' style = 'background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgB3VU7DsIwDHUKQweQQAIJJsoGN+A4HKFsMNFubPQIvQqnKEwtE1RCIgMDE8VJU8Y6/Q48qXEHJ/azX2KAhsGyn8FksQfGbEiSAb2LcfiAz+NgQ7l25OHT5RHNFj8T9GBiaiuzN4L363HKc2QqwFNmzpjFb8EVCCBbC02IeziPL8M8X0Ouqiw6h0u/+zlK02NkObtQHpGOU+kAyGKu42dAw9BiUEXCJAMlYUfrcAGpxsSWSYEeg7XKrKiEbbQu3YOKEm68yYaKxoXBes+gZmQ32VM2whom+IVQE2QArJuLLLyMSZ34qQibKHRLPr9F0VKT/ztAQQmrmywUKffRT0UqYUdJGArAF0uH8hIz1+yPxTgVp9MzO2V8wFG6gzbwBd+dca/KkxeeAAAAAElFTkSuQmCC);'></span>";
+					$button_image = "<span class = 'button__image' style = 'background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgB3VU7DsIwDHUKQweQQAIJJsoGN+A4HKFsMNFubPQIvQqnKEwtE1RCIgMDE8VJU8Y6/Q48qXEHJ/azX2KAhsGyn8FksQfGbEiSAb2LcfiAz+NgQ7l25OHT5RHNFj8T9GBiaiuzN4L363HKc2QqwFNmzpjFb8EVCCBbC02IeziPL8M8X0Ouqiw6h0u/+zlK02NkObtQHpGOU+kAyGKu42dAw9BiUEXCJAMlYUfrcAGpxsSWSYEeg7XKrKiEbbQu3YOKEm68yYaKxoXBes+gZmQ32VM2whom+IVQE2QArJuLLLyMSZ34qQibKHRLPr9F0VKT/ztAQQmrmywUKffRT0UqYUdJGArAF0uH8hIz1+yPxTgVp9MzO2V8wFG6gzbwBd+dca/KkxeeAAAAAElFTkSuQmCC);'></span>";
 				}
-				echo $button_icon;
+				echo $button_image;
 				?>
             </button>
 		<?php else: ?>
